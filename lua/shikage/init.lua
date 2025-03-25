@@ -1,5 +1,5 @@
 require("shikage.remap")
-
+ 
 vim.g.clipboard = {
     name = 'clip.exe',
     copy = {
