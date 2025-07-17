@@ -4,12 +4,9 @@ return {
 
 	config = function()
 		require('nvim-treesitter.configs').setup {
-			ensure_installed = {"vue", "java", "lua", "python","typescript", "javascript", "html", "css" }, -- Add other languages if needed
+			ensure_installed = {"vue", "java", "lua", "python","typescript", "javascript", "html", "css", "markdown", "vimdoc" }, -- Add other languages if needed
 			highlight = { enable = true },  -- Enables syntax highlighting
 			additional_vim_regex_highlighting = false,
 		}
 	end
-	
 }
-
-	
