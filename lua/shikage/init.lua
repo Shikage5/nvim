@@ -8,3 +8,14 @@ vim.o.shiftwidth = 4
 vim.o.scrolloff = 5
 vim.o.signcolumn = "yes"
 vim.o.wrap = false
+
+-- Highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank {
+      higroup = "IncSearch", -- You can change this to any highlight group
+      timeout = 200,     -- Time in milliseconds
+    }
+  end,
+})
