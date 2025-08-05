@@ -11,7 +11,6 @@ vim.o.wrap = false
 vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.autoindent = true
-vim.o.winborder = "rounded"
 
 
 -- Highlight yanked text
