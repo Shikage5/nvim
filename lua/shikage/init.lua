@@ -11,6 +11,7 @@ vim.o.wrap = false
 vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.autoindent = true
+vim.o.winborder = "rounded"
 
 
 -- Highlight yanked text
@@ -38,3 +39,12 @@ vim.g.clipboard = {
 	cache_enabled = 0,
 }
 
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
+vim.lsp.enable({'jdtls', 'lua_ls', 'vue_ls', 'vtsls'})
