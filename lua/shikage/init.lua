@@ -24,19 +24,19 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
---Clipboard for Windows with WSL
-vim.g.clipboard = {
-	name = 'WslClipboard',
-	copy = {
-		['+'] = 'clip.exe',
-		['*'] = 'clip.exe',
-	},
-	paste = {
-		['+'] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write(($([Console]::In.ReadToEnd()) -replace "`r", ""))',
-		['*'] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write(($([Console]::In.ReadToEnd()) -replace "`r", ""))',
-	},
-	cache_enabled = 0,
-}
+-- --Clipboard for Windows with WSL
+-- vim.g.clipboard = {
+-- 	name = 'WslClipboard',
+-- 	copy = {
+-- 		['+'] = 'clip.exe',
+-- 		['*'] = 'clip.exe',
+-- 	},
+-- 	paste = {
+-- 		['+'] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write(($([Console]::In.ReadToEnd()) -replace "`r", ""))',
+-- 		['*'] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write(($([Console]::In.ReadToEnd()) -replace "`r", ""))',
+-- 	},
+-- 	cache_enabled = 0,
+-- }
 
 vim.diagnostic.config({
   virtual_text = true,
@@ -46,4 +46,4 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-vim.lsp.enable({'jdtls', 'lua_ls', 'vue_ls', 'vtsls'})
+vim.lsp.enable({'jdtls', 'lua_ls', 'vue_ls', 'vtsls', 'ts_ls'})
